@@ -1,0 +1,112 @@
+[
+{
+  "fields": {
+    "username": "admin",
+    "first_name": "",
+    "last_name": "",
+    "is_active": true,
+    "is_superuser": true,
+    "is_staff": true,
+    "last_login": "2017-08-29T13:48:13Z",
+    "groups": [],
+    "user_permissions": [],
+    "password": "pbkdf2_sha256$20000$mXl6sr9P0CsQ$THFgPoY91Xt47Mx67RYfhMYQZ6zBgN/Z2LjIibRlEZQ=",
+    "email": "admin@yahoo.com",
+    "date_joined": "2017-08-29T12:41:00Z"
+  },
+  "model": "auth.user",
+  "pk": 1
+},
+{
+  "fields": {
+    "expire_date": "2017-09-12T13:32:48Z",
+    "session_data": "MWE4YmMyNGU5OWU2NDQ5ZDAwM2UyZTFkMGYyZTNmN2JiNTcxMTNlZjp7Il9hdXRoX3VzZXJfaGFzaCI6Ijc5ZmUyNDg5MmU4MWM1ZjFjNGMyMWFkMTMxZTE4ZmIzMjlkMmZhYTMiLCJfYXV0aF91c2VyX2JhY2tlbmQiOiJkamFuZ28uY29udHJpYi5hdXRoLmJhY2tlbmRzLk1vZGVsQmFja2VuZCIsIl9hdXRoX3VzZXJfaWQiOiIxIn0="
+  },
+  "model": "sessions.session",
+  "pk": "fv6aovegw9eni2rr0oitksxoia6q2731"
+},
+{
+  "fields": {
+    "expire_date": "2017-09-12T14:13:26Z",
+    "session_data": "YTI5MWMwYjc0ZjNhY2IzMGQ1MDM3OTBjNzlhMDdmNmU4ZGYyZWU2Nzp7InNvY2lhbGFjY291bnRfc3RhdGUiOlt7InByb2Nlc3MiOiJsb2dpbiIsInNjb3BlIjoiIiwiYXV0aF9wYXJhbXMiOiIifSwiTHp6emRNdmNnT290Il19"
+  },
+  "model": "sessions.session",
+  "pk": "rrjhs6mpsz36rj2x3mlq7kdziu3p08a8"
+},
+{
+  "fields": {
+    "domain": "example.com",
+    "name": "example.com"
+  },
+  "model": "sites.site",
+  "pk": 1
+},
+{
+  "fields": {
+    "name": "Google",
+    "sites": [
+      1
+    ],
+    "secret": "WarNXu_OPIyrcQQGLK0leyrj",
+    "client_id": "225286963972-gupso854t7d60ie36gevngs3eph1o7bk.apps.googleusercontent.com",
+    "key": "",
+    "provider": "google"
+  },
+  "model": "socialaccount.socialapp",
+  "pk": 1
+},
+{
+  "fields": {
+    "action_flag": 1,
+    "action_time": "2017-08-29T13:34:25Z",
+    "object_repr": "Google",
+    "object_id": "1",
+    "change_message": "",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "socialaccount",
+      "socialapp"
+    ]
+  },
+  "model": "admin.logentry",
+  "pk": 1
+},
+{
+  "fields": {
+    "action_flag": 2,
+    "action_time": "2017-08-29T13:48:21Z",
+    "object_repr": "example.com",
+    "object_id": "1",
+    "change_message": "No fields changed.",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "sites",
+      "site"
+    ]
+  },
+  "model": "admin.logentry",
+  "pk": 2
+},
+{
+  "fields": {
+    "action_flag": 2,
+    "action_time": "2017-08-29T13:48:39Z",
+    "object_repr": "Google",
+    "object_id": "1",
+    "change_message": "Changed sites.",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "socialaccount",
+      "socialapp"
+    ]
+  },
+  "model": "admin.logentry",
+  "pk": 3
+}
+]

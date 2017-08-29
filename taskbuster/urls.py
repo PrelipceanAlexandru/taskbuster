@@ -19,11 +19,15 @@ from django.contrib import admin
 from django.conf.urls.i18n import i18n_patterns
 from .views import home, home_files
 
+# taskbuster-21  taskbuster
 
 urlpatterns = [
     url(r'^(?P<filename>(robots.txt)|(humans.txt))$',
         home_files, name='home-files'),
+    url(r'^accounts/', include('allauth.urls')),
+    url(r'^accounts/logout/$', 'django.contrib.auth.views.logout', {'next_page': '/'}),
 ]
+
 
 urlpatterns += i18n_patterns(
     url(r'^$', home, name='home'),
