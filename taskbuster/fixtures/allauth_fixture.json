@@ -19,6 +19,24 @@
 },
 {
   "fields": {
+    "username": "alexandru",
+    "first_name": "Alexandru",
+    "last_name": "Pre",
+    "is_active": true,
+    "is_superuser": false,
+    "is_staff": false,
+    "last_login": "2017-08-30T07:47:31Z",
+    "groups": [],
+    "user_permissions": [],
+    "password": "!b8yhDAArYVUMpE4LmHaXiw8Ljms2acY02CfSXqBg",
+    "email": "alex.prelipcean@yahoo.com",
+    "date_joined": "2017-08-30T07:47:00Z"
+  },
+  "model": "auth.user",
+  "pk": 2
+},
+{
+  "fields": {
     "expire_date": "2017-09-12T13:32:48Z",
     "session_data": "MWE4YmMyNGU5OWU2NDQ5ZDAwM2UyZTFkMGYyZTNmN2JiNTcxMTNlZjp7Il9hdXRoX3VzZXJfaGFzaCI6Ijc5ZmUyNDg5MmU4MWM1ZjFjNGMyMWFkMTMxZTE4ZmIzMjlkMmZhYTMiLCJfYXV0aF91c2VyX2JhY2tlbmQiOiJkamFuZ28uY29udHJpYi5hdXRoLmJhY2tlbmRzLk1vZGVsQmFja2VuZCIsIl9hdXRoX3VzZXJfaWQiOiIxIn0="
   },
@@ -27,18 +45,22 @@
 },
 {
   "fields": {
-    "expire_date": "2017-09-12T14:13:26Z",
-    "session_data": "YTI5MWMwYjc0ZjNhY2IzMGQ1MDM3OTBjNzlhMDdmNmU4ZGYyZWU2Nzp7InNvY2lhbGFjY291bnRfc3RhdGUiOlt7InByb2Nlc3MiOiJsb2dpbiIsInNjb3BlIjoiIiwiYXV0aF9wYXJhbXMiOiIifSwiTHp6emRNdmNnT290Il19"
+    "domain": "alex.com",
+    "name": "alex.com"
   },
-  "model": "sessions.session",
-  "pk": "rrjhs6mpsz36rj2x3mlq7kdziu3p08a8"
+  "model": "sites.site",
+  "pk": 1
 },
 {
   "fields": {
-    "domain": "example.com",
-    "name": "example.com"
+    "verified": true,
+    "user": [
+      "alexandru"
+    ],
+    "primary": true,
+    "email": "alex.prelipcean@yahoo.com"
   },
-  "model": "sites.site",
+  "model": "account.emailaddress",
   "pk": 1
 },
 {
@@ -53,6 +75,31 @@
     "provider": "google"
   },
   "model": "socialaccount.socialapp",
+  "pk": 2
+},
+{
+  "fields": {
+    "uid": "101567330706572096554",
+    "last_login": "2017-08-30T07:47:31Z",
+    "user": [
+      "alexandru"
+    ],
+    "provider": "google",
+    "extra_data": "{\"family_name\": \"Pre\", \"name\": \"Alexandru Pre\", \"picture\": \"https://lh3.googleusercontent.com/-D82z9lj8ab4/AAAAAAAAAAI/AAAAAAAAAIk/yCZXI_q7XqI/photo.jpg\", \"locale\": \"en\", \"id\": \"101567330706572096554\", \"link\": \"https://plus.google.com/101567330706572096554\", \"given_name\": \"Alexandru\", \"email\": \"alex.prelipcean@yahoo.com\", \"verified_email\": true}",
+    "date_joined": "2017-08-30T07:47:00Z"
+  },
+  "model": "socialaccount.socialaccount",
+  "pk": 1
+},
+{
+  "fields": {
+    "app": 2,
+    "token_secret": "",
+    "expires_at": "2017-08-30T08:47:30Z",
+    "account": 1,
+    "token": "ya29.Glu3BFnOEF4fYV-ZKz2fKLzELBqx5G2uGFIZ7SpdoycTuGby8H109i8EjAyocvsu5LZ6iCeHy5-_-Lxvi-6CbFRN0vIns_jHshRewiwFsbisTL6DfimrCrzB_967"
+  },
+  "model": "socialaccount.socialtoken",
   "pk": 1
 },
 {
@@ -108,5 +155,131 @@
   },
   "model": "admin.logentry",
   "pk": 3
+},
+{
+  "fields": {
+    "action_flag": 2,
+    "action_time": "2017-08-29T14:35:56Z",
+    "object_repr": "Google",
+    "object_id": "1",
+    "change_message": "No fields changed.",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "socialaccount",
+      "socialapp"
+    ]
+  },
+  "model": "admin.logentry",
+  "pk": 4
+},
+{
+  "fields": {
+    "action_flag": 3,
+    "action_time": "2017-08-30T07:26:50Z",
+    "object_repr": "Google",
+    "object_id": "1",
+    "change_message": "",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "socialaccount",
+      "socialapp"
+    ]
+  },
+  "model": "admin.logentry",
+  "pk": 5
+},
+{
+  "fields": {
+    "action_flag": 1,
+    "action_time": "2017-08-30T07:28:37Z",
+    "object_repr": "Google",
+    "object_id": "2",
+    "change_message": "",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "socialaccount",
+      "socialapp"
+    ]
+  },
+  "model": "admin.logentry",
+  "pk": 6
+},
+{
+  "fields": {
+    "action_flag": 2,
+    "action_time": "2017-08-30T07:29:13Z",
+    "object_repr": "alex.com",
+    "object_id": "1",
+    "change_message": "Changed domain and name.",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "sites",
+      "site"
+    ]
+  },
+  "model": "admin.logentry",
+  "pk": 7
+},
+{
+  "fields": {
+    "action_flag": 2,
+    "action_time": "2017-08-30T07:29:25Z",
+    "object_repr": "Google",
+    "object_id": "2",
+    "change_message": "No fields changed.",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "socialaccount",
+      "socialapp"
+    ]
+  },
+  "model": "admin.logentry",
+  "pk": 8
+},
+{
+  "fields": {
+    "action_flag": 2,
+    "action_time": "2017-08-30T07:37:42Z",
+    "object_repr": "Google",
+    "object_id": "2",
+    "change_message": "Changed client_id.",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "socialaccount",
+      "socialapp"
+    ]
+  },
+  "model": "admin.logentry",
+  "pk": 9
+},
+{
+  "fields": {
+    "action_flag": 2,
+    "action_time": "2017-08-30T07:46:32Z",
+    "object_repr": "Google",
+    "object_id": "2",
+    "change_message": "Changed client_id and secret.",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "socialaccount",
+      "socialapp"
+    ]
+  },
+  "model": "admin.logentry",
+  "pk": 10
 }
 ]
