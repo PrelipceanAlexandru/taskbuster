@@ -20,13 +20,14 @@ from django.conf.urls.i18n import i18n_patterns
 from .views import home, home_files
 
 # taskbuster-21  taskbuster
-
+# https://docs.djangoproject.com/en/1.11/topics/http/shortcuts/
 urlpatterns = [
     url(r'^(?P<filename>(robots.txt)|(humans.txt))$',
         home_files, name='home-files'),
-    url(r'^accounts/logout/$', 'django.contrib.auth.views.logout', {'next_page': '/'}),
+    url(r'^accounts/logout/$', 'django.contrib.auth.views.logout',
+        {'next_page': '/'}),
     url(r'^accounts/', include('allauth.urls')),
-    
+
 ]
 
 

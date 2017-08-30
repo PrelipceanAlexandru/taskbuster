@@ -12,20 +12,29 @@ import warnings
 
 
 class HomeNewVisitorTest(StaticLiveServerTestCase):
+    # open teh brouser  and wait 3 seconds if needs to
 
     def setUp(self):
         self.browser = webdriver.Firefox()
         self.browser.implicitly_wait(3)
+        activate('en')
+    # close the browser
 
     def tearDown(self):
         self.browser.quit()
+    # takes one argument "namespace"
 
     def get_full_url(self, namespace):
+        # live_server_url -> gives you the local host url
+        # reverse(namespace) -> gives you the relative url of a given
+        # namespace "/"
+        # return -> http://127.0.0.1:8000/
         return self.live_server_url + reverse(namespace)
 
-    # def test_home_title(self):
-    #     self.browser.get(self.get_full_url("home"))
-    #     self.assertIn("Benvingut a TaskBuster!", self.browser.title)
+    # assert that the title of the page has Welcome to Django
+    def test_home_title(self):
+        self.browser.get(self.get_full_url("home"))
+        self.assertIn('Welcome to TaskBuster!', self.browser.title)
 
     # def test_h1_css(self):
     #     self.browser.get(self.get_full_url("home"))
